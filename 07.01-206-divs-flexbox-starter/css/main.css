@@ -97,39 +97,96 @@ textarea {
 
 
 html {
-  background-color: whitesmoke;
-  height: 100%;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.4;
+    height: 100%;
+    width: 100%;
+    background: url(../img/kenrick-mills-RWsRztYTRec-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 2em;
+    font-size: 1.25em;
+    height: 100%;
+    color: #fff;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
+header,
+footer {
+    background-color: #222;
+    height: 80px;
+    width: 100%;
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: .75em;
-  background-color: seagreen;
-  height: 300px;
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-  border: 3px darkgray solid;
-  padding-left: 10px;
-  padding-right: 10px;
+main {
+    background-color: rgba(0, 0, 0, .7);
+    height: 200px;
+    width: 100%;
+    padding: 0 50px;
 }
+
+header,
+h4,
+p,
+footer,
+main,
+.div-1,
+.div-2,
+.div-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 2em;
+}
+
+footer {
+    border: darkgray 1.5px solid;
+}
+
+.flex-container {
+    font-size: 1em;
+    font-family: 'Raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border: darkgray 1.5px solid;
+}
+
+.flex-container-items {
+    font-size: 1em;
+    font-family: 'Raleway';
+    display: flex;
+    justify-content: justify;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.flex-items {
+    color: #fff;
+    line-height: 1.2em;
+    font-size: .8em;
+    background-color: #3b5e3b;
+    border: darkgray 1.5px solid;
+    width: 30%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+}
+
 
 
 
@@ -200,8 +257,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -215,9 +274,9 @@ body {
    ========================================================================== */
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -228,11 +287,13 @@ body {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
